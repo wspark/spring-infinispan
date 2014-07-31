@@ -99,17 +99,7 @@
     <alias name="spring.RegularCommonsMultipartResolver" alias="multipartResolver" />
     
     <!-- component-scan 설정-->
-    <context:component-scan base-package="egovframework"/>
+    <context:component-scan base-package="egovframework"/>  
+   
     
-    <!-- infinispan -->
-    <context:component-scan base-package="com.opennaru.jdg.springcache"/>
-    
-     <bean id="cacheManager" class="org.infinispan.spring.provider.SpringRemoteCacheManagerFactoryBean"> 
-	        <property name="configurationProperties"> 
-	                <props> 
-	                        <prop key="infinispan.client.hotrod.server_list">172.16.166.206:11222</prop> 
-	                </props> 
-	        </property> 
-   	</bean>
-        
 </beans>

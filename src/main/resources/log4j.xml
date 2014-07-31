@@ -28,7 +28,7 @@
     
     <!-- add for Logging Query to console  -->
     <logger name="java.sql" additivity="false">
-        <level value="DEBUG" />
+        <level value="INFO" />
         <appender-ref ref="console" />
     </logger>
    <!--  
