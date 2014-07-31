@@ -36,7 +36,8 @@ import org.springframework.stereotype.Repository;
 public class TestRepository {
 	HashMap<Integer, Member> hash = new HashMap<Integer, Member>();
 	
-	@Cacheable("members")
+//	@Cacheable("members")
+	@Cacheable("carcache")
 	public Member getMemberWithId(int id) {
 		System.out.println(">>> getMemberWithId=" + id);
 		Member member = hash.get(id);
@@ -44,7 +45,8 @@ public class TestRepository {
 		return member;
 	}
 
-	@CacheEvict(value = "members", allEntries = true)
+//	@CacheEvict(value = "members", allEntries = true)
+	@CacheEvict(value = "carcache", allEntries = true)
 	public void saveMember(final Member member) {
 		hash.put(member.getMemberId(), member);
 		System.out.println("<<< saveMember=" +member);

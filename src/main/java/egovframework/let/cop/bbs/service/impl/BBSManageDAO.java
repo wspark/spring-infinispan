@@ -93,10 +93,11 @@ public class BBSManageDAO extends EgovAbstractDAO {
 		System.out.println( repo.getMemberWithId(1) );
 		System.out.println( repo.getMemberWithId(1) );
 		System.out.println( repo.getMemberWithId(1) );
-		
+		System.out.println("========================");
 		System.out.println( repo.getMemberWithId(2) );
 		System.out.println( repo.getMemberWithId(2) );
 		System.out.println( repo.getMemberWithId(2) );
+		System.out.println("========================");
     	
     	
 	return (BoardVO)selectByPk("BBSManageDAO.selectBoardArticle", boardVO);

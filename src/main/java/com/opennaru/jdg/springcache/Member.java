@@ -21,12 +21,14 @@
  */
 package com.opennaru.jdg.springcache;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Junshik Jeon(service@opennaru.com, nameislocus@gmail.com)
  *
  */
-public class Member {
+public class Member implements Serializable {
 
 	private final int memberId;
 	private final String memberName;

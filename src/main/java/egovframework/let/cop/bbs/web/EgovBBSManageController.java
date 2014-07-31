@@ -17,6 +17,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springmodules.validation.commons.DefaultBeanValidator;
 
+import com.opennaru.jdg.springcache.Member;
+import com.opennaru.jdg.springcache.TestRepository;
+
 import egovframework.com.cmm.EgovMessageSource;
 import egovframework.com.cmm.LoginVO;
 import egovframework.com.cmm.service.EgovFileMngService;
@@ -29,7 +32,6 @@ import egovframework.let.cop.bbs.service.BoardMasterVO;
 import egovframework.let.cop.bbs.service.BoardVO;
 import egovframework.let.cop.bbs.service.EgovBBSAttributeManageService;
 import egovframework.let.cop.bbs.service.EgovBBSManageService;
-import egovframework.let.utl.sim.service.EgovFileScrty;
 import egovframework.rte.fdl.property.EgovPropertyService;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
@@ -71,6 +73,9 @@ public class EgovBBSManageController {
     
     @Resource(name="egovMessageSource")
     EgovMessageSource egovMessageSource;
+    
+//    @Autowired	
+//	private TestRepository repo;
     
     //---------------------------------
     // 2009.06.29 : 2단계 기능 추가
@@ -202,6 +207,20 @@ public class EgovBBSManageController {
 	    if(EgovUserDetailsHelper.isAuthenticated()){
 	    	user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		}
+	    
+	    //
+//	    repo.saveMember(new Member(1, "test1"));
+//		repo.saveMember(new Member(2, "test2"));
+//		System.out.println("========================");
+//		System.out.println( repo.getMemberWithId(1) );
+//		System.out.println( repo.getMemberWithId(1) );
+//		System.out.println( repo.getMemberWithId(1) );
+//		System.out.println("========================");
+//		System.out.println( repo.getMemberWithId(2) );
+//		System.out.println( repo.getMemberWithId(2) );
+//		System.out.println( repo.getMemberWithId(2) );
+//		System.out.println("========================");
+		
 
 		// 조회수 증가 여부 지정
 		boardVO.setPlusCount(true);
