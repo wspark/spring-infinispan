@@ -45,8 +45,11 @@
      	<property name="jndiName" value="java:/jboss/mysqlds"/>
      </bean>
      -->
-      <bean id="dataSourceSpied" class="org.springframework.jndi.JndiObjectFactoryBean">
-     	<property name="jndiName" value="java:/comp/env/jdbc/mysqlds"/>
+      <bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource">
+     	<property name="driverClassName" value="${Globals.DriverClassName}"/>
+        <property name="url" value="${Globals.Url}" />
+        <property name="username" value="${Globals.UserName}"/>
+        <property name="password" value="${Globals.Password}"/>
      </bean>
      
      <bean id="dataSource-mysql" class="net.sf.log4jdbc.Log4jdbcProxyDataSource" >         
@@ -54,7 +57,7 @@
 		     <property name="logFormatter">                    
 		         <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter" >
 		             <property name="loggingType" value="SINGLE_LINE" />
-		             <property name="margin" value="19" />   
+		       <!--       <property name="margin" value="19" /> -->   
 		             <property name="sqlPrefix" value="SQL:::" />            
 		         </bean>            
 		     </property>     
