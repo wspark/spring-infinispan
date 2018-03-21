@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>egovframework.template.web</groupId>
 	<artifactId>Simple_Homepage</artifactId>
-	<packaging>war</packaging>
+	<packaging>war</packaging> 
 	<version>1.0.0</version>
 	<name>Template-Web-Simple_Homepage</name>
 	<url>http://maven.apache.org</url>
